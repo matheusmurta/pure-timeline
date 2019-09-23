@@ -1,0 +1,367 @@
+
+body {
+  background-color: #eff1fc;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #d8d8d8;
+  top: 0;
+  bottom: 0;
+  left: 0%;
+  margin-left: -3px;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/*Bolinha da timeline*/
+.container::after {
+  content: ' ✔' ;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #d8d8d8;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  text-align: center;
+  color: green;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+
+}
+
+.right {
+  left: 0%;
+}
+
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  -webkit-animation: fadein 4s;
+          animation: fadein 4s;
+
+}
+
+
+
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  background-color: white;
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  width: 415px;
+  height: 100%;
+  overflow: hidden;
+  -webkit-animation: 1s ease-out 0s 1 slideInFromLeft;
+          animation: 1s ease-out 0s 1 slideInFromLeft;
+
+
+}
+
+  /*-----Animações-----------*/
+
+@-webkit-keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+
+
+
+/*----------------*/
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-containerLeft {
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.flex-containerRight {
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 50%;
+  -webkit-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  height: 43px; 
+}
+
+.column2 {
+  -webkit-box-flex: 50%;
+  -webkit-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  height: 90px; 
+  background-color: #f8f8f8;
+}
+
+
+
+.text-split {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all
+}
+
+.head {
+  background-color: #ffffff;
+}
+
+
+
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.left-card-content {
+  background-color: #f1f1f1;
+  width: 100px;
+  text-align: left;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.right-card-content {
+  background-color: #f1f1f1;
+  width: 100px;
+  text-align: right;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+/*------Util----------*/
+  
+.pr-40 {
+  padding-right: 15px;
+}
+
+
+.pl-40 {
+  padding-left: 15px;
+}
+
+.t-border {
+  border-top: 1px solid #d8d8d8;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.bold-text{
+  font-weight: bold;
+}
+
+
+
+@media (min-width: 1281px) {
+ 
+
+}
+
+
+/*
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+
+}
+
+
+/*
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+
+
+}
+
+
+/*
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+ 
+
+
+}
+
+
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+.row {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+
+}
+
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+}
+
+/*------ Icons ----------*/
+
+.icon{
+width: 20px; 
+height: 20px;
+float: left;
+}
+
+.money {
+background-repeat: no-repeat;
+background-position: center;
+background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='12px' height='12px' viewBox='0 0 6 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com --%3E%3Ctitle%3Emoney-bag@1x%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='v' transform='translate(-191.000000, -146.000000)' fill='%23A5A5A5' fill-rule='nonzero'%3E%3Cg id='Group-2-Copy' transform='translate(28.000000, 138.000000)'%3E%3Cg id='Total-$$' transform='translate(163.000000, 7.000000)'%3E%3Cg id='money-bag' transform='translate(0.000000, 1.000000)'%3E%3Cpath d='M3.23421687,4.36481928 L2.83662651,4.36481928 C2.69204819,4.36481928 2.57493976,4.24771084 2.57493976,4.10313253 C2.57493976,3.95855422 2.69204819,3.84144578 2.83662651,3.84144578 L3.53638554,3.84144578 C3.63180723,3.84144578 3.70987952,3.76337349 3.70987952,3.66795181 C3.70987952,3.57253012 3.63180723,3.49445783 3.53638554,3.49445783 L3.20819277,3.49445783 L3.20819277,3.25301205 C3.20819277,3.15759036 3.13012048,3.07951807 3.0346988,3.07951807 C2.93927711,3.07951807 2.86120482,3.15759036 2.86120482,3.25301205 L2.86120482,3.49445783 L2.83662651,3.49445783 C2.50120482,3.49445783 2.22795181,3.76771084 2.22795181,4.10313253 C2.22795181,4.43855422 2.50120482,4.71180723 2.83662651,4.71180723 L3.23421687,4.71180723 C3.37879518,4.71180723 3.49590361,4.82891566 3.49590361,4.97349398 C3.49590361,5.11807229 3.37879518,5.23518072 3.23421687,5.23518072 L2.52144578,5.23518072 C2.4260241,5.23518072 2.34795181,5.31325301 2.34795181,5.4086747 C2.34795181,5.50409639 2.4260241,5.58216867 2.52144578,5.58216867 L2.8626506,5.58216867 L2.8626506,5.82939759 C2.8626506,5.92481928 2.94072289,6.00289157 3.03614458,6.00289157 C3.13156627,6.00289157 3.20963855,5.92481928 3.20963855,5.82939759 L3.20963855,5.58216867 L3.23855422,5.58216867 C3.24,5.58216867 3.24144578,5.58216867 3.24289157,5.58216867 C3.57542169,5.57783133 3.84289157,5.3060241 3.84289157,4.97349398 C3.84289157,4.63807229 3.56963855,4.36481928 3.23421687,4.36481928 Z' id='Path'%3E%3C/path%3E%3Cpath d='M5.64289157,3.97156627 C5.46072289,3.55228916 5.20915663,3.1460241 4.89108434,2.76578313 C4.50650602,2.30313253 4.12337349,1.99373494 3.92819277,1.85060241 L4.66554217,0.482891566 C4.70168675,0.414939759 4.69012048,0.331084337 4.63373494,0.277590361 C4.44289157,0.0910843373 4.24048193,0 4.01493976,0 C3.80819277,0 3.61879518,0.0780722892 3.4539759,0.14746988 C3.32385542,0.200963855 3.20096386,0.253012048 3.10120482,0.253012048 C3.07084337,0.253012048 3.04481928,0.248674699 3.01879518,0.238554217 C2.6746988,0.112771084 2.41012048,0.0346987952 2.15421687,0.0346987952 C1.83036145,0.0346987952 1.55421687,0.164819277 1.28385542,0.442409639 C1.22746988,0.500240964 1.21879518,0.591325301 1.26361446,0.659277108 L2.05879518,1.86072289 C1.86216867,2.00674699 1.48626506,2.31325301 1.10891566,2.76578313 C0.792289157,3.1460241 0.539277108,3.55228916 0.357108434,3.97156627 C0.128674699,4.49927711 0.0130120482,5.05012048 0.0130120482,5.60819277 C0.0130120482,6.34987952 0.617349398,6.95421687 1.35903614,6.95421687 L4.64096386,6.95421687 C5.3826506,6.95421687 5.98698795,6.34987952 5.98698795,5.60819277 C5.98698795,5.05012048 5.8713253,4.49927711 5.64289157,3.97156627 Z M1.63373494,0.586987952 C1.80144578,0.442409639 1.96192771,0.378795181 2.15421687,0.378795181 C2.35951807,0.378795181 2.59084337,0.448192771 2.89879518,0.562409639 C2.96240964,0.585542169 3.03036145,0.597108434 3.09975904,0.597108434 C3.26891566,0.597108434 3.43084337,0.53060241 3.58554217,0.465542169 C3.73445783,0.403373494 3.87614458,0.344096386 4.01349398,0.344096386 C4.08,0.344096386 4.1739759,0.355662651 4.29253012,0.439518072 L3.59855422,1.72915663 L2.38987952,1.72915663 L1.63373494,0.586987952 Z M4.64096386,6.60722892 L1.35903614,6.60722892 C0.808192771,6.60722892 0.36,6.15903614 0.36,5.60819277 C0.36,4.68144578 0.699759036,3.80240964 1.36771084,2.99566265 C1.78987952,2.4853012 2.21927711,2.1686747 2.34939759,2.07614458 L3.64771084,2.07614458 C3.77927711,2.16722892 4.20722892,2.4853012 4.62939759,2.99566265 C5.29879518,3.80240964 5.63710843,4.68 5.63710843,5.60819277 C5.64,6.15903614 5.19180723,6.60722892 4.64096386,6.60722892 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.place {
+background-repeat: no-repeat;
+background-position: center;
+background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='12px' height='12px' viewBox='0 0 6 8' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com --%3E%3Ctitle%3Eplace@1x%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='v' transform='translate(-133.000000, -146.000000)' fill='%23A5A5A5' fill-rule='nonzero'%3E%3Cg id='Group-2-Copy' transform='translate(28.000000, 138.000000)'%3E%3Cg id='Patio-savassi' transform='translate(105.000000, 7.000000)'%3E%3Cg id='place' transform='translate(0.000000, 1.000000)'%3E%3Cpath d='M5.461701,1.29611541 C4.89553492,0.472475497 3.99824706,0 3.00008728,0 C2.0019275,0 1.10463964,0.472475497 0.538473555,1.29611541 C-0.0249114574,2.11559126 -0.15499915,3.15306889 0.189796244,4.06967223 C0.282020755,4.31998189 0.428621082,4.56317187 0.624484101,4.79105966 L2.80267439,7.36279048 C2.85193708,7.421 2.92411468,7.45454545 3.00008728,7.45454545 C3.07605988,7.45454545 3.14823748,7.42101456 3.19750017,7.36279048 L5.3750821,4.79175852 C5.5718142,4.56256037 5.71822623,4.31963246 5.80968305,4.07133203 C6.15517371,3.15306889 6.02508602,2.11559126 5.461701,1.29611541 Z M5.32409572,3.88878303 C5.25356939,4.08035902 5.13842998,4.26976563 4.98206692,4.45195064 C4.98163237,4.45238743 4.98119783,4.45282422 4.9808502,4.45334837 L3.00008728,6.79189169 L1.01810764,4.45187784 C0.861831493,4.26985298 0.74669208,4.08046094 0.675470481,3.88705043 C0.390323358,3.12900178 0.498539052,2.2712049 0.965035457,1.59256463 C1.43299482,0.911754972 2.17478871,0.521294034 3.00008728,0.521294034 C3.82537136,0.521294034 4.56707834,0.911740412 5.03505219,1.59256463 C5.50163551,2.2712049 5.60993811,3.12900178 5.32409572,3.88878303 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M3.09090909,1.63636364 C2.28891557,1.63636364 1.63636364,2.28882852 1.63636364,3.09090909 C1.63636364,3.89298967 2.28882852,4.54545455 3.09090909,4.54545455 C3.89298967,4.54545455 4.54545455,3.89298967 4.54545455,3.09090909 C4.54545455,2.28891557 3.89290261,1.63636364 3.09090909,1.63636364 Z M3.09090909,4.02596366 C2.5753211,4.02596366 2.15584001,3.60648257 2.15584001,3.09089458 C2.15584001,2.57530659 2.5753211,2.1558255 3.09090909,2.1558255 C3.60649708,2.1558255 4.02597817,2.57530659 4.02597817,3.09089458 C4.02597817,3.60648257 3.60649708,4.02596366 3.09090909,4.02596366 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.clock {
+background-repeat: no-repeat;
+background-position: center;
+background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='12px' height='12px' viewBox='0 0 6 6' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com --%3E%3Ctitle%3Eclock (1)@1x%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='v' transform='translate(-98.000000, -147.000000)' fill='%23A5A5A5' fill-rule='nonzero'%3E%3Cg id='Group-2-Copy' transform='translate(28.000000, 138.000000)'%3E%3Cg id='13h' transform='translate(70.000000, 7.000000)'%3E%3Cg id='clock-(1)' transform='translate(0.000000, 2.000000)'%3E%3Cpath d='M5.7605098,1.83152515 C5.44417647,1.09362003 4.90662745,0.556962646 4.16297059,0.239621753 C3.79128431,0.0810150671 3.40188235,0 2.99506863,0 C2.58832353,0 2.20179412,0.0802499411 1.83051961,0.239621753 C1.09301961,0.556119046 0.553088235,1.0924331 0.236196078,1.83152515 C0.0774019608,2.20180687 0,2.58973554 0,2.99670407 C0,3.40375108 0.0774019608,3.7948972 0.236196078,4.1652574 C0.553088235,4.90434945 1.09308824,5.44388095 1.83051961,5.76045672 C2.20186275,5.91982853 2.58831373,6 2.99506863,6 C3.40182353,6 3.79128431,5.91898493 4.16291176,5.76045672 C4.90656863,5.44310602 5.44411765,4.90309386 5.76051961,4.1652574 C5.91979412,3.79371027 6,3.40375108 6,2.99670407 C6,2.58973554 5.91986275,2.20306247 5.7605098,1.83152515 Z M5.28160784,4.32281449 C5.04610784,4.72690889 4.72348039,5.04748686 4.31714706,5.28450914 C3.91327451,5.52013851 3.4707549,5.63896845 2.99513725,5.63896845 C2.63758824,5.63896845 2.29641176,5.57006788 1.97160784,5.42890214 C1.64681373,5.28780507 1.36638235,5.10231107 1.13179412,4.86766264 C0.897205882,4.63294554 0.710490196,4.34962332 0.570872549,4.02409166 C0.431666667,3.69974692 0.364205882,3.35452798 0.364205882,2.99671388 C0.364205882,2.5207663 0.481078431,2.08024994 0.715254902,1.6772738 C0.950264706,1.27282626 1.27296078,0.951904967 1.67642157,0.715569332 C2.07981373,0.479243506 2.51946078,0.361041356 2.99506863,0.361041356 C3.4707549,0.361041356 3.91319608,0.479939967 4.31707843,0.715569332 C4.72341176,0.952601428 5.04534314,1.27351291 5.28153922,1.67726399 C5.51773529,2.0809464 5.63580392,2.5207663 5.63580392,2.99670407 C5.63580392,3.47266146 5.5185098,3.91617947 5.28160784,4.32281449 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M3.04427896,2.93087899 L3.04427896,1.05945594 C3.04427896,0.947470069 2.93127156,0.857142857 2.80155752,0.857142857 C2.68024681,0.857142857 2.57142857,0.947470069 2.57142857,1.05945594 L2.57142857,2.95977161 C2.57142857,2.96339938 2.57981941,2.97788888 2.57981941,2.98868582 C2.57142857,3.05372659 2.59241191,3.10791644 2.64258184,3.15130935 L3.89374151,4.23150014 C3.97746227,4.30378567 4.13224878,4.30378567 4.21590702,4.23150014 C4.31212025,4.14841768 4.30579274,4.02786983 4.21590702,3.94971077 L3.04427896,2.93087899 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.calendar {
+background-repeat: no-repeat;
+background-position: center;
+background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='12px' height='12px' viewBox='0 0 6 6' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com --%3E%3Ctitle%3Ecalendar@1x%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='v' transform='translate(-44.000000, -147.000000)' fill='%23A5A5A5' fill-rule='nonzero'%3E%3Cg id='Group-2-Copy' transform='translate(28.000000, 138.000000)'%3E%3Cg id='22/09' transform='translate(16.000000, 7.000000)'%3E%3Cg id='calendar' transform='translate(0.000000, 2.000000)'%3E%3Cpath d='M0.211886305,5.55 L5.7881137,5.55 C5.90697674,5.55 6,5.45689655 6,5.33793103 L6,0.605172414 C6,0.486206897 5.90697674,0.393103448 5.7881137,0.393103448 L4.73901809,0.393103448 L4.73901809,0.212068966 C4.73901809,0.0931034483 4.64599483,0 4.52713178,0 C4.40826873,0 4.31524548,0.0931034483 4.31524548,0.212068966 L4.31524548,0.393103448 L1.72093023,0.393103448 L1.72093023,0.212068966 C1.72093023,0.0931034483 1.62790698,0 1.50904393,0 C1.39018088,0 1.29715762,0.0931034483 1.29715762,0.212068966 L1.29715762,0.393103448 L0.211886305,0.393103448 C0.0930232558,0.393103448 0,0.486206897 0,0.605172414 L0,5.34310345 C0,5.45689655 0.0981912145,5.55 0.211886305,5.55 Z M0.42377261,0.817241379 L1.29715762,0.817241379 L1.29715762,0.931034483 C1.29715762,1.05 1.39018088,1.14310345 1.50904393,1.14310345 C1.62790698,1.14310345 1.72093023,1.05 1.72093023,0.931034483 L1.72093023,0.817241379 L4.31524548,0.817241379 L4.31524548,0.931034483 C4.31524548,1.05 4.40826873,1.14310345 4.52713178,1.14310345 C4.64599483,1.14310345 4.73901809,1.05 4.73901809,0.931034483 L4.73901809,0.817241379 L5.58139535,0.817241379 L5.58139535,1.36551724 L0.42377261,1.36551724 L0.42377261,0.817241379 L0.42377261,0.817241379 Z M0.42377261,1.78965517 L5.57622739,1.78965517 L5.57622739,5.13103448 L0.42377261,5.13103448 L0.42377261,1.78965517 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M4.58950893,2.85 L1.56049107,2.85 C1.44241071,2.85 1.35,2.94878049 1.35,3.075 C1.35,3.20121951 1.44241071,3.3 1.56049107,3.3 L4.58950893,3.3 C4.70758929,3.3 4.8,3.20121951 4.8,3.075 C4.8,2.94878049 4.70758929,2.85 4.58950893,2.85 Z' id='Path'%3E%3C/path%3E%3Cpath d='M2.93793103,3.9 L1.41206897,3.9 C1.29310345,3.9 1.2,3.99878049 1.2,4.125 C1.2,4.25121951 1.29310345,4.35 1.41206897,4.35 L2.93793103,4.35 C3.05689655,4.35 3.15,4.25121951 3.15,4.125 C3.15,3.99878049 3.05689655,3.9 2.93793103,3.9 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.check{
+background-repeat: no-repeat;
+background-position: center;
+background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='12px' height='12px' viewBox='0 0 14 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com --%3E%3Ctitle%3Echeck copy@1x%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='v' transform='translate(-10.000000, -143.000000)'%3E%3Cg id='check-copy' transform='translate(11.000000, 144.000000)'%3E%3Ccircle id='Oval' stroke='%23D8D8D8' fill='%23FFFFFF' cx='6' cy='6' r='6'%3E%3C/circle%3E%3Cg id='check-circle' transform='translate(3.000000, 4.000000)' fill='%2300B336' fill-rule='nonzero'%3E%3Cpath d='M5.82669355,0.594092742 L5.37233871,0.136068548 C5.27824597,0.0412096774 5.12506048,0.0405846774 5.03020161,0.134697581 L2.1803629,2.96163306 L0.974879032,1.74637097 C0.88078629,1.6515121 0.727600806,1.6508871 0.632741935,1.74497984 L0.174697581,2.19933468 C0.0798387097,2.29342742 0.0792137097,2.4466129 0.173326613,2.54149194 L2.00358871,4.38657258 C2.09768145,4.48143145 2.25086694,4.48205645 2.34572581,4.38794355 L5.82534274,0.93625 C5.92018145,0.842137097 5.92078629,0.688951613 5.82669355,0.594092742 L5.82669355,0.594092742 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
