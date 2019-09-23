@@ -2,4 +2,4 @@
 
 - Feito com Javascript, css e html puro. 
 
-basta clonar o projeto e abrir localmente o index.html 
+Para executar clone o projeto e abra localmente o index.html 
